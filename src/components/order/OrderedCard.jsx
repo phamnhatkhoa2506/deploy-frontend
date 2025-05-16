@@ -15,7 +15,10 @@ const OrderedCard = ({ order }) => {
                     <div className="d-flex flex-row flex-nowrap gap-2 horizontal-scroll-container overflow-x-auto p-4">
                         {order.productResponseList.map((product) => (
                             <div key={product.id} className="flex-shrink-0" style={{ maxWidth: 'none' }}>
-                                <ProductCard key={product.id} product={product} />
+                                <div>
+                                    <ProductCard key={product.id} product={product} />
+                                    <label><b>{product.quantity} x {product.unit_price}</b></label>
+                                </div>
                             </div>
                         ))}
                     </div>

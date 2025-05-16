@@ -4,12 +4,12 @@ import { useNavigate } from 'react-router-dom'; // nếu dùng react-router
 import { checkPassword } from '../helpers/regex.js'; // điều chỉnh đúng path tới file chứa hàm checkPassword
 import { login } from '../api/authenticateAPI/authenticate'; // điều chỉnh đúng path tới file chứa hàm login
 import { useNotification } from '../contexts/NotificationContext.jsx';
+import GoogleAuth from '../components/common/GoogleAuth.jsx';
 
 import '../styles/pages/LoginPage.css'; // Import your CSS file
 
 const LoginPage = () => {
   const navigate = useNavigate();
-  const [notifications, setNotifications] = useState([]);
   const [formData, setFormData] = useState({ username: '', password: '' });
   const { showNotification } = useNotification();
 
@@ -91,6 +91,8 @@ const LoginPage = () => {
           <button type="button" className="btn btn-secondary">
             <a href="/signup" className="signup-link">Đăng ký</a>
           </button>
+
+          <div className="mt-4">  <GoogleAuth /> </div>
         </form>
       </div>
     </>

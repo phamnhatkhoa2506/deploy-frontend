@@ -3,7 +3,12 @@ import apiConfig from "../../js/config.js";
 import { getCustomerInfo } from '../customerAPI/customer.js'
 import { getNumberOfItemsInCart } from '../customerAPI/cart.js'
 
-axios.defaults.baseURL = apiConfig.baseUrl + apiConfig.authenticateBase;
+
+
+axios.defaults.baseURL = (apiConfig.baseUrl + apiConfig.authenticateBase) || "http://localhost:8080";
+axios.defaults.headers = {
+    Accept: "application/json",
+}
 
 async function login(data) {
     const response = await axios.post("login", data);

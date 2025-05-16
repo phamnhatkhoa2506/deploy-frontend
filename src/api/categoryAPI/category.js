@@ -2,8 +2,12 @@ import axios from "axios";
 
 import apiConfig from "../../js/config.js"
 
+
 const categoryApi = axios.create({
-  baseURL: apiConfig.baseUrl + apiConfig.categoryBase
+    baseURL: (apiConfig.baseUrl + apiConfig.categoryBase) || "http://localhost:8080",
+    headers: {
+        Accept: "application/json",
+    },
 });
 
 async function getCategoryList() {

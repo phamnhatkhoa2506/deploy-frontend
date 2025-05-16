@@ -3,9 +3,10 @@ import axios from "axios";
 import apiConfig from "../../js/config.js";
 
 const productAPI = axios.create({
-    baseURL: apiConfig.baseUrl + apiConfig.productBase,
+    baseURL: (apiConfig.baseUrl + apiConfig.productBase) || "http://localhost:8080",
     headers: {
         'Content-Type': 'application/json',
+        Accept: "application/json"
     },
 })
 

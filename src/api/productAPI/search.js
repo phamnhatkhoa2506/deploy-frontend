@@ -3,7 +3,10 @@ import axios from "axios";
 import apiConfig from "../../js/config.js";
 
 const productAPI = axios.create({
-    baseURL: apiConfig.baseUrl + apiConfig.productBase
+    baseURL: apiConfig.baseUrl + apiConfig.productBase,
+    headers: {
+        Accept: "application/json",
+    },
 })
 
 async function searchProducts(query) {

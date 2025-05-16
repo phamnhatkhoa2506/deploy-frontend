@@ -12,12 +12,12 @@ const EWalletPaymentPage = () => {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-gray-100">
+        <div className="flex flex-col items-center justify-center p-4 bg-gray-100">
             <h1 className="text-2xl font-bold mb-6 text-gray-800">Thanh toán bằng Ví điện tử</h1>
             <p className="text-gray-600 mb-4">Số tiền cần thanh toán: <span className="font-semibold text-green-600">$10.00</span></p>
 
             {/* Nút PayPal */}
-            <div className="d-flex flex-column justify-content-center w-full max-w-xs">
+            <div className="d-flex flex-column justify-content-center align-items-center w-full">
                 <h5>Thanh toán bằng PayPal</h5>
                 <PayPalButton amount={10} onSuccess={handleSuccessPayment} />
             </div>
