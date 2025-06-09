@@ -1,5 +1,5 @@
 const apiConfig = {
-    baseUrl: "https://pbl3-backend-production.up.railway.app/supermarket",
+    baseUrl: "https://deploy-backend-production-8d06.up.railway.app/supermarket",
     authenticateBase: "/auth/",
     customerBase: "/customer",
     productBase: "/product/",
